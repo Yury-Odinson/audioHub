@@ -11,3 +11,6 @@ export const progressEnd = document.querySelector(".progress__end");
 export const buttonBack = document.getElementById("button__back");
 export const buttonPlay = document.getElementById("button__play");
 export const buttonNext = document.getElementById("button__next");
+
+export const volumeBar = document.querySelector(".player-volumeBar");
+export const volume = document.querySelector(".volume");

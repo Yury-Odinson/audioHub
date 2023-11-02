@@ -90,6 +90,10 @@ button {
     cursor: pointer;
 }
 
+.volume {
+    width: 100%;
+}
+
 .player-settings {
     display: flex;
     justify-content: space-around;
@@ -99,4 +103,10 @@ button {
     margin: 0 auto;
     width: 70%;
     height: 10px;
+}
+
+.player-progressBar:hover,
+.player-volumeBar:hover {
+    /* height: 20px; */
+    border: 1px solid #f5000052;
 }
