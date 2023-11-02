@@ -57,20 +57,46 @@ button {
     font-size: 24px;
 }
 
-.player-progressBar {
+.player-progressBar,
+.player-volumeBar {
+    position: relative;
     height: 30px;
-    border: 1px solid red;
+    background-color: #56693252;
     cursor: pointer;
 }
 
-.progress {
+.progress__start,
+.progress__end {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.progress__start {
+    left: 3%;
+}
+
+.progress__end {
+    right: 3%;
+}
+
+
+.progress,
+.volume {
     height: 100%;
-    width: 80%;
-    background-color: aqua;
+    background-color: #56693252;
+    width: 0;
     cursor: pointer;
 }
 
 .player-settings {
     display: flex;
     justify-content: space-around;
+}
+
+.player-volumeBar {
+    margin: 0 auto;
+    width: 70%;
+    height: 10px;
 }

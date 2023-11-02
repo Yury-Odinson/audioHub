@@ -18,18 +18,25 @@
 <body>
     <div class="wrapper">
         <div class="player">
-            <span class="player-song__title">Losdfgsrgf lisubfgsr - ioybsiorg</span>
+            <span class="player-song__title"></span>
 
             <div class="player-song__image"></div>
+            <audio class="audio" src="/audio/2015-1 - Fraytime.mp3"></audio>
 
             <div class="player-progressBar">
                 <div class="progress"></div>
+                <span class="progress__start"></span>
+                <span class="progress__end"></span>
             </div>
 
             <div class="player-settings">
-                <button class="player-settings__back"></button>
-                <button class="player-settings__play"></button>
-                <button class="player-settings__next"></button>
+                <button id="button__back" class="player-settings__back"></button>
+                <button id="button__play" class="player-settings__play"></button>
+                <button id="button__next" class="player-settings__next"></button>
+            </div>
+
+            <div class="player-volumeBar">
+                <div class="volume"></div>
             </div>
 
 
