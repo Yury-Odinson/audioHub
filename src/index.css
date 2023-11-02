@@ -121,3 +121,11 @@ button {
 .player-progressBar {
     display: none;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b9b6bd5d
+}
