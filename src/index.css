@@ -1,0 +1,76 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 900px;
+    height: 500px;
+    background-color: #fff;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+}
+
+.player-settings__back,
+.player-settings__play,
+.player-settings__next {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player-settings__back {
+    background-image: url(/image/icons8-back.png);
+
+}
+
+.player-settings__play {
+    background-image: url(/image/icons8-play.png);
+
+}
+
+.player-settings__next {
+    background-image: url(/image/icons8-next.png);
+
+}
+
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 400px;
+    background-color: #97979748;
+}
+
+.player-song__title {
+    margin: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.player-progressBar {
+    height: 30px;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 80%;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.player-settings {
+    display: flex;
+    justify-content: space-around;
+}
