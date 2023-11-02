@@ -107,6 +107,5 @@ button {
 
 .player-progressBar:hover,
 .player-volumeBar:hover {
-    /* height: 20px; */
-    border: 1px solid #f5000052;
+    border: 1px solid #ffbf8b;
 }
