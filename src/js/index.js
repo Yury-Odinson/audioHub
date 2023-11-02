@@ -1,5 +1,5 @@
 import { changePlayButton } from "./UI.js";
-import { buttonBack, buttonNext, buttonPlay, songName, faveForm } from "./declaration.js";
+import { buttonBack, buttonNext, buttonPlay, songName, faveForm, volumeBar, volume } from "./declaration.js";
 
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
 
@@ -39,4 +39,13 @@ export const wavesurfer = WaveSurfer.create({
     waveColor: '#808080',
     progressColor: '#ffa31a',
     url: `/audio/${songName.innerHTML}.mp3`,
+});
+
+volumeBar.addEventListener("click", (e) => {
+    const width = volumeBar.clientWidth;
+    const clickCoorX = e.offsetX;
+    const currentVol = (clickCoorX / width).toFixed(2);
+    wavesurfer.setVolume(currentVol);
+    const precentVolume = (clickCoorX / width * 100).toFixed();
+    volume.style.width = `${precentVolume}%`;
 });

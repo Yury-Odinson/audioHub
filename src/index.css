@@ -41,7 +41,6 @@ button {
 
 }
 
-
 .player {
     display: flex;
     flex-direction: column;
@@ -81,7 +80,6 @@ button {
     right: 3%;
 }
 
-
 .progress,
 .volume {
     height: 100%;
@@ -100,12 +98,26 @@ button {
 }
 
 .player-volumeBar {
+    position: relative;
     margin: 0 auto;
     width: 70%;
     height: 10px;
 }
 
-.player-progressBar:hover,
-.player-volumeBar:hover {
-    border: 1px solid #ffbf8b;
+.player-volumeBar__img {
+    position: absolute;
+    width: 30px;
+    bottom: -100%;
+}
+
+.player-volumeBar__img:first-child {
+    left: -30px;
+}
+
+.player-volumeBar__img:last-child {
+    right: -40px;
+}
+
+.player-progressBar {
+    display: none;
 }
