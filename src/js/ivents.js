@@ -19,14 +19,14 @@ document.body.addEventListener("keyup", (event) => {
 buttonBack.addEventListener("click", () => {
     if (songIndex > 0) {
         songIndex--;
-        setSong();
+        setSong(songs[songIndex]);
     } else return;
 });
 
 buttonNext.addEventListener("click", () => {
     if (songIndex < songs.length - 1) {
         songIndex++;
-        setSong();
+        setSong(songs[songIndex]);
     } else return;
 });
 

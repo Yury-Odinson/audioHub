@@ -1,5 +1,5 @@
 // import { changePlayButton } from "./UI.js";
-// import { buttonBack, buttonNext, buttonPlay, songName, audio, progressStart, progressEnd, progressBar, progress, volumeBar, volume, faveForm } from "./declaration.js";
+// import { buttonBack, buttonNext, buttonPlay, songName, audio, progressStart, progressEnd, progressBar, progress, volumeBar, volume, waveForm } from "./declaration.js";
 
 // import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
 
@@ -84,7 +84,7 @@
 
 
 // const wavesurfer = WaveSurfer.create({
-//     container: faveForm,
+//     container: waveForm,
 //     waveColor: '#808080',
 //     progressColor: '#ffa31a',
 //     url: `/audio/${songName.innerHTML}.mp3`,

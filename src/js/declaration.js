@@ -15,4 +15,8 @@ export const buttonNext = document.getElementById("button__next");
 export const volumeBar = document.querySelector(".player-volumeBar");
 export const volume = document.querySelector(".volume");
 
-export const faveForm = document.getElementById("wave");
+export const waveForm = document.getElementById("wave");
+
+
+export const setList = document.querySelector(".setList");
+export const templateNode = document.querySelector("template");
