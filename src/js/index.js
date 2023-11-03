@@ -6,7 +6,7 @@ import { isPlaying } from "./ivents.js";
 // const songs = ["song 1", "song 2", ... , "song n"];
 export const songs = ["2015-1 - Fraytime", "2016-4 - Empty Hollow", "2018-3 - Darkness", "2020-1 - Nostalgia", "vodokanal-minus"];
 
-const currentSong = localStorage.getItem("currentSong") || songs[0];
+let currentSong = localStorage.getItem("currentSong") || songs[0];
 
 songName.innerHTML = currentSong;
 
@@ -31,6 +31,7 @@ export function playStop() {
 export function setSong(name) {
     songName.innerHTML = name;
     wavesurfer.load(`/audio/${name}.mp3`);
+    currentSong = name;
     localStorage.setItem("currentSong", name);
 }
 
@@ -50,5 +51,18 @@ songs.map(element => {
     const song = template.querySelector(".setList__item");
     song.textContent = element;
     setList.append(song);
-    song.addEventListener("click", (e) => setSong(e.target.innerHTML));
+    
+    song.addEventListener("click", (e) => {
+        setSong(e.target.innerHTML);
+        if (e.target.innerHTML == currentSong) {
+            setStyle();
+            e.target.style.backgroundColor = "#ffa31a";
+        }
+    });
 });
+
+// reset style inactive song in the playList
+function setStyle() {
+    const li = document.querySelectorAll(".setList__item");
+    li.forEach(element => element.style.backgroundColor = "white");
+}

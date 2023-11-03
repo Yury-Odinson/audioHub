@@ -155,18 +155,10 @@ button {
     width: 100%;
     font-size: 20px;
     cursor: pointer;
-}
-
-.setList__item:nth-child(even) {
-    background-color: var(--BackgroundDark);
+    border-bottom: 1px solid var(--BackgroundDark) ;
 }
 
 .setList__item:hover {
     transition: 0.2s;
     background-color: var(--halfPrimary);
-}
-
-
-.setList__itemActive {
-    background-color: var(--Primary);
 }
