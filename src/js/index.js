@@ -1,5 +1,5 @@
 import { changePlayButton } from "./UI.js";
-import { buttonBack, buttonNext, buttonPlay, songName, faveForm, volumeBar, volume } from "./declaration.js";
+import { buttonBack, buttonNext, buttonPlay, songName, faveForm, volumeBar, volume, progressStart, progressEnd } from "./declaration.js";
 
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
 
@@ -49,3 +49,16 @@ volumeBar.addEventListener("click", (e) => {
     const precentVolume = (clickCoorX / width * 100).toFixed();
     volume.style.width = `${precentVolume}%`;
 });
+
+// Current time & duration
+{
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const secondsRemainder = Math.round(seconds) % 60;
+        const paddedSeconds = `0${secondsRemainder}`.slice(-2);
+        return `${minutes}:${paddedSeconds}`;
+    }
+
+    wavesurfer.on('decode', (duration) => (progressEnd.textContent = formatTime(duration)));
+    wavesurfer.on('timeupdate', (currentTime) => (progressStart.textContent = formatTime(currentTime)));
+}

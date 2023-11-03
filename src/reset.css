@@ -1,5 +1,7 @@
 :root {
     --BackgroundDark: #F0ECF4;
+    --Primary: #ffa31a;
+    --Secondary: #808080;
 }
 
 * {
