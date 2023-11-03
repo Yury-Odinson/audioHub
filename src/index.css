@@ -42,6 +42,7 @@ button {
     flex-direction: column;
     justify-content: space-around;
     width: 400px;
+    min-width: 320px;
     height: 400px;
     background-color: var(--BackgroundDark);
 }
@@ -135,6 +136,7 @@ button {
     align-items: center;
     flex-direction: column;
     width: 400px;
+    min-width: 320px;
 }
 
 .setList-name {
@@ -161,4 +163,13 @@ button {
 .setList__item:hover {
     transition: 0.2s;
     background-color: var(--halfPrimary);
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        margin: 0 auto;
+        flex-direction: column;
+        width: 400px;
+        margin-bottom: 130px;
+    }
 }
