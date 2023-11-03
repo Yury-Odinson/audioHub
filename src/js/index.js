@@ -1,6 +1,6 @@
 import { buttonPlay, songName, waveForm, progressStart, progressEnd, templateNode, setList } from "./declaration.js";
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
-import { isPlaying } from "./ivents.js";
+import { isPlaying, songIndex } from "./ivents.js";
 
 // songs must contain song file names without formats in the /audio folder. expample:
 // const songs = ["song 1", "song 2", ... , "song n"];
@@ -12,6 +12,7 @@ songName.innerHTML = currentSong;
 
 export const wavesurfer = WaveSurfer.create({
     container: waveForm,
+    autoPlay: true,
     waveColor: '#808080',
     progressColor: '#ffa31a',
     url: `/audio/${songName.innerHTML}.mp3`,
@@ -27,6 +28,11 @@ export function playStop() {
         buttonPlay.style.backgroundImage = "url('image/icons8-play.png')";
     }
 }
+
+wavesurfer.on('finish', function () {
+    let nextSong = songs.indexOf(currentSong) + 1;
+    wavesurfer.load(`/audio/${songs[nextSong]}.mp3`);
+});
 
 export function setSong(name) {
     songName.innerHTML = name;
@@ -51,7 +57,6 @@ songs.map(element => {
     const song = template.querySelector(".setList__item");
     song.textContent = element;
     setList.append(song);
-    
     song.addEventListener("click", (e) => {
         setSong(e.target.innerHTML);
         if (e.target.innerHTML == currentSong) {
