@@ -1,10 +1,14 @@
 import { buttonPlay, songName, waveForm, progressStart, progressEnd, templateNode, setList } from "./declaration.js";
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
-import { isPlaying, songIndex } from "./ivents.js";
+import { isPlaying } from "./ivents.js";
 
+// songs must contain song file names without formats in the /audio folder. expample:
+// const songs = ["song 1", "song 2", ... , "song n"];
 export const songs = ["2015-1 - Fraytime", "2016-4 - Empty Hollow", "2018-3 - Darkness", "2020-1 - Nostalgia", "vodokanal-minus"];
 
-songName.innerHTML = songs[songIndex];
+const currentSong = localStorage.getItem("currentSong") || songs[0];
+
+songName.innerHTML = currentSong;
 
 export const wavesurfer = WaveSurfer.create({
     container: waveForm,
@@ -27,6 +31,7 @@ export function playStop() {
 export function setSong(name) {
     songName.innerHTML = name;
     wavesurfer.load(`/audio/${name}.mp3`);
+    localStorage.setItem("currentSong", name);
 }
 
 // Current time & duration
