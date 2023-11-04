@@ -1,5 +1,8 @@
 :root {
     --BackgroundDark: #F0ECF4;
+    --Primary: #ffa31a;
+    --halfPrimary: #fad6a0;
+    --Secondary: #808080;
 }
 
 * {
