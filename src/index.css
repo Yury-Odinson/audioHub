@@ -137,6 +137,8 @@ button {
     flex-direction: column;
     width: 400px;
     min-width: 320px;
+    overflow-y: scroll;
+    max-height: 400px;
 }
 
 .setList-name {

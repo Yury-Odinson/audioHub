@@ -4,7 +4,7 @@ import { isPlaying, songIndex } from "./ivents.js";
 
 // songs must contain song file names without formats in the /audio folder. expample:
 // const songs = ["song 1", "song 2", ... , "song n"];
-export const songs = ["2015-1 - Fraytime", "2016-4 - Empty Hollow", "2018-3 - Darkness", "2020-1 - Nostalgia", "vodokanal-minus"];
+export const songs = ["2015-1 - Fraytime", "2016-4 - Empty Hollow", "2018-3 - Darkness", "2020-1 - Nostalgia_1", "2020-1 - Nostalgia_2", "svoboda - vodokanal minus_1", "svoboda - vodokanal minus_2" , "svoboda - vodokanal minus_2", "svoboda - vodokanal minus_2"];
 
 let currentSong = localStorage.getItem("currentSong") || songs[0];
 
