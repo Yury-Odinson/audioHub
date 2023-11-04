@@ -1,7 +1,5 @@
 .wrapper {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     margin: 100px auto;
     max-width: 800px;
     background-color: #fff;
@@ -26,15 +24,15 @@ button {
 }
 
 .player-settings__back {
-    background-image: url(/image/icons8-back.png);
+    background-image: url(./image/icons8-back.png);
 }
 
 .player-settings__play {
-    background-image: url(/image/icons8-play.png);
+    background-image: url(./image/icons8-play.png);
 }
 
 .player-settings__next {
-    background-image: url(/image/icons8-next.png);
+    background-image: url(./image/icons8-next.png);
 }
 
 .player {
