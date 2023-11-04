@@ -15,7 +15,7 @@ export const wavesurfer = WaveSurfer.create({
     autoPlay: true,
     waveColor: '#808080',
     progressColor: '#ffa31a',
-    url: `/audio/${songName.innerHTML}.mp3`,
+    url: `./audio/${songName.innerHTML}.mp3`,
 });
 
 // start/pause playing song & change image for button play/pause
@@ -31,7 +31,7 @@ export function playStop() {
 
 wavesurfer.on('finish', function () {
     let nextSong = songs.indexOf(currentSong) + 1;
-    wavesurfer.load(`/audio/${songs[nextSong]}.mp3`);
+    wavesurfer.load(`./audio/${songs[nextSong]}.mp3`);
 });
 
 export function setSong(name) {
