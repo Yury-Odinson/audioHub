@@ -165,6 +165,18 @@ button {
     background-color: var(--halfPrimary);
 }
 
+.setList::-webkit-scrollbar {
+    width: 10px;
+}
+
+.setList::-webkit-scrollbar-track {
+    background-color: var(--BackgroundDark);
+}
+
+.setList::-webkit-scrollbar-thumb {
+    background-color: var(--halfPrimary);
+}
+
 @media (max-width: 800px) {
     .wrapper {
         margin: 0 auto;
