@@ -157,7 +157,7 @@ button {
     width: 100%;
     font-size: 20px;
     cursor: pointer;
-    border-bottom: 1px solid var(--BackgroundDark) ;
+    border-bottom: 1px solid var(--BackgroundDark);
 }
 
 .setList__item:hover {
@@ -177,11 +177,27 @@ button {
     background-color: var(--halfPrimary);
 }
 
+.setList__itemActive {
+    background-color: #ffa31a;
+}
+
+#wave {
+    background-color: #ffffffd2;
+}
+
 @media (max-width: 800px) {
     .wrapper {
         margin: 0 auto;
         flex-direction: column;
         width: 400px;
         margin-bottom: 130px;
+    }
+
+    .player {
+        height: 250px;
+    }
+
+    .player-volumeBar {
+        display: none;
     }
 }

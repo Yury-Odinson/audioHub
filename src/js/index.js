@@ -1,10 +1,10 @@
 import { buttonPlay, songName, waveForm, progressStart, progressEnd, templateNode, setList } from "./declaration.js";
+import { isPlaying } from "./ivents.js";
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
-import { isPlaying, songIndex } from "./ivents.js";
 
 // songs must contain song file names without formats in the /audio folder. expample:
 // const songs = ["song 1", "song 2", ... , "song n"];
-export const songs = ["2015-1 - Fraytime", "2016-4 - Empty Hollow", "2018-3 - Darkness", "2020-1 - Nostalgia_1", "2020-1 - Nostalgia_2", "svoboda - vodokanal minus_1", "svoboda - vodokanal minus_2" , "svoboda - vodokanal minus_2", "svoboda - vodokanal minus_2"];
+export const songs = ["2015-1 - Fraytime", "2016-4 - Empty Hollow", "2018-3 - Darkness", "2020-1 - Nostalgia_1", "2020-1 - Nostalgia_2", "svoboda - vodokanal minus_1", "svoboda - vodokanal minus_2", "svoboda - vodokanal minus_2", "svoboda - vodokanal minus_2"];
 
 let currentSong = localStorage.getItem("currentSong") || songs[0];
 
@@ -57,11 +57,14 @@ songs.map(element => {
     const song = template.querySelector(".setList__item");
     song.textContent = element;
     setList.append(song);
+    if (song.innerHTML === currentSong) {
+        song.classList.add("setList__itemActive");
+    }
     song.addEventListener("click", (e) => {
         setSong(e.target.innerHTML);
         if (e.target.innerHTML == currentSong) {
             setStyle();
-            e.target.style.backgroundColor = "#ffa31a";
+            e.target.classList.add("setList__itemActive");
         }
     });
 });
@@ -69,5 +72,5 @@ songs.map(element => {
 // reset style inactive song in the playList
 function setStyle() {
     const li = document.querySelectorAll(".setList__item");
-    li.forEach(element => element.style.backgroundColor = "white");
-}
+    li.forEach(element => element.classList.remove("setList__itemActive"));
+};
