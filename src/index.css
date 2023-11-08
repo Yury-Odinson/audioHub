@@ -181,10 +181,6 @@ button {
     background-color: #ffa31a;
 }
 
-#wave {
-    background-color: #ffffffd2;
-}
-
 @media (max-width: 800px) {
     .wrapper {
         margin: 0 auto;
@@ -199,5 +195,11 @@ button {
 
     .player-volumeBar {
         display: none;
+    }
+}
+
+@media (max-width: 800px)and (max-height: 770px) {
+    #wave {
+        background-color: #ffffffd2;
     }
 }
